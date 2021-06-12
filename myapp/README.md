@@ -20,3 +20,10 @@ samples, guidance on mobile development, and a full API reference.
 flutter run -d chrome
 flutter build web
 ```
+
+## Run in Nginx Docker
+```
+flutter build web
+docker build -f nginx/Dockerfile -t flutter-myapp-web .
+docker run -d -p 8060:8060 flutter-myapp-web 
+```
