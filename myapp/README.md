@@ -22,8 +22,18 @@ flutter build web
 ```
 
 ## Run in Nginx Docker
-```
-flutter build web
-docker build -f nginx/Dockerfile -t flutter-myapp-web .
-docker run -d -p 8060:8060 flutter-myapp-web 
-```
+* Build flutter for web and docker image. 
+  ```
+  flutter build web
+  docker build -f nginx/Dockerfile -t flutter-myapp-web .
+  docker run -d -p 8060:8060 --name flutter-myapp-web flutter-myapp-web
+  ```
+* Open app in your browser.
+  ```
+  http://localhost:8060
+  ```
+* Stop flutter app in docker.
+  ```
+  docker stop flutter-myapp-web
+  docker rm flutter-myapp-web
+  ```
