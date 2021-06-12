@@ -1,1 +1,5 @@
-# flutter-examples
+# Flutter examples
+
+```
+flutter create myapp
+```
